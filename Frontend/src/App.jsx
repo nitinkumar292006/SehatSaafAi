@@ -1,19 +1,22 @@
-import Navbar from "./components/Navbar.jsx"
-import Dashboard from "./pages/Dashboard.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Navbar from "./components/Navbar"
+import Dashboard from "./pages/Dashboard"
+import Home from "./pages/Home"
+import Prescription from "./pages/Prescription"
 
 export default function App() {
+  return (
+    <BrowserRouter>
 
-return (
+      <Navbar />
 
-<div className="min-h-screen bg-gray-50">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/prescription" element={<Prescription />} />
+      </Routes>
 
-  <Navbar />
-
-  <Dashboard />
-
-</div>
-
-
-)
-
+    </BrowserRouter>
+  )
 }

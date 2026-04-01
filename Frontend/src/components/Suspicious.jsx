@@ -10,15 +10,15 @@ export default function Suspicious({ data = [] }) {
 
  return (
 
-  <div className="bg-green-400 text-white font-bold p-6 rounded-xl w-full">
+  <div className="bg-red-50 border border-red-200 text-red-900 p-6 rounded-xl">
 
-   <h2 className="mb-4 font-semibold">
-    Suspicious Charges ({data.length})
+   <h2 className="mb-4 font-semibold text-lg">
+    🚨 Suspicious Charges ({data.length})
    </h2>
 
    {data.map((item, i) => (
 
-    <div key={i} className="mb-3 border-b border-red-300/30 pb-2">
+    <div key={i} className="bg-white/70 rounded-lg p-3 mb-3 shadow-sm">
 
      <div className="font-medium">
       {item.name}

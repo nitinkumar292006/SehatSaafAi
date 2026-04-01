@@ -15,7 +15,7 @@ export default function Summary({ summary }) {
 
     return (
 
-        <div className="bg-white border rounded-lg p-6">
+        <div className="bg-linear-to-br from-white to-blue-50 border rounded-xl p-6 shadow-md">
 
             <h2 className="font-semibold text-gray-900 mb-4">
                 Bill Breakdown

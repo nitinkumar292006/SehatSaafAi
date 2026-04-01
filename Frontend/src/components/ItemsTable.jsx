@@ -10,11 +10,11 @@ export default function ItemsTable({ items }) {
 
             <div className="overflow-x-auto">
 
-                <table className="w-full min-w-[500px] text-sm">
+                <table className="w-full text-sm rounded-xl overflow-hidden">
 
-                    <thead>
+                    <thead className="bg-gray-100 text-gray-700">
 
-                        <tr className="border-b text-left text-gray-600">
+                        <tr className="hover:bg-blue-50 transition">
 
                             <th className="py-2">Name</th>
                             <th>Amount</th>
