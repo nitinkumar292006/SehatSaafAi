@@ -1,105 +1,148 @@
-# 🏥 SehatSaaf AI — Medical Bill Transparency Analyzer
+# 🏥 SehatSaaf AI — Smart Healthcare Transparency Platform
 
-**SehatSaaf AI** is an AI-powered system that analyzes hospital bills to detect suspicious charges, duplicate services, and overpriced medicines.
-The goal is to help patients **understand their medical bills clearly and avoid overcharging**.
+**SehatSaaf AI** is an AI-powered healthcare assistant designed to bring **transparency, clarity, and trust** into medical billing and prescriptions.
 
-This project was built as a **hackathon solution** to improve transparency in healthcare billing.
+It helps users:
+
+* 🧾 Detect overcharges in hospital bills
+* 💊 Understand prescriptions clearly
+* 🔔 Get timely medicine reminders
+
+> 🚀 Built as a hackathon-ready product using **AI + OCR + modern web technologies**
 
 ---
 
-# 🚀 Key Features
+# 🌟 Key Features
 
-### 📄 Bill Upload & OCR
+## 🧾 AI Bill Analyzer
 
-Users upload a hospital bill image or PDF.
-The system uses **OCR (Optical Character Recognition)** to extract text from the document.
+* Upload hospital bills (image/PDF)
+* Extracts structured data using OCR
+* Detects:
 
-### 🤖 AI Bill Analysis
+  * Overpriced medicines
+  * Duplicate charges
+  * Suspicious billing patterns
+* Generates a **transparency score**
 
-An AI model analyzes the extracted bill data and identifies:
+---
 
-* Itemized charges
-* Total bill amount
-* Categories of services
+## 💊 Smart Prescription Assistant (NEW 🔥)
 
-### 💊 Medicine Price Comparison
+### 📄 Prescription Upload
 
-Detected medicines are compared with a **market price dataset** to find possible overpricing.
+* Upload handwritten or printed prescriptions
+* AI extracts:
+
+  * Medicine names
+  * Dosage
+  * Frequency (e.g., 2 times/day)
+  * Instructions (before/after food)
+
+---
+
+### ⏰ Smart Medicine Scheduling
+
+* Converts prescription into a **daily schedule**
 
 Example:
 
-| Medicine           | Hospital Price | Market Price |
-| ------------------ | -------------- | ------------ |
-| Azithromycin 500mg | ₹450           | ₹75          |
+```
+Paracetamol → 10:00 AM, 8:00 PM  
+Amoxicillin → 8:00 AM, 2:00 PM, 9:00 PM  
+Vitamin D → 7:00 AM  
+```
 
-### ⚠ Suspicious Charge Detection
+---
 
-The system highlights:
+### 🔔 Real-Time Reminders
 
-* Overpriced medicines
-* Duplicate services
-* Unusual bill distributions
+* Browser-based notifications
+* Toggle ON/OFF reminders
+* Alerts user exactly at medicine time
 
-### 📊 Bill Breakdown Dashboard
+---
 
-The frontend dashboard visualizes:
+### ⚡ Live Highlight System
 
-* Category breakdown (Room, Medicine, Lab Tests, etc.)
-* Transparency score
-* Suspicious alerts
-* AI explanation of the bill
+* Current medicine gets auto-highlighted
+* Shows: **“Time to take this medicine”**
+* Improves adherence & usability
+
+---
+
+### 🧠 AI Explanation
+
+* Explains prescription in simple language
+* Helps non-medical users understand instructions
+
+---
+
+## 📊 Interactive Dashboard
+
+* Category-wise bill breakdown (Pie Chart)
+* Suspicious charges highlighting
+* Itemized bill table
+* AI-generated explanation
+
+---
+
+## 🤖 AI Transparency Engine
+
+* Converts raw data into human-readable insights
+* Explains:
+
+  * Spending patterns
+  * Suspicious charges
+  * Medicine usage
 
 ---
 
 # 🧠 How It Works
 
 ```
-Hospital Bill
-      │
-      ▼
- OCR Text Extraction
- (Tesseract.js)
-      │
-      ▼
- AI Bill Parsing
- (LLM Analysis)
-      │
-      ▼
- Bill Processing
- - Category Detection
- - Duplicate Detection
- - Price Comparison
-      │
-      ▼
- Transparency Score
- + Suspicious Charge Detection
-      │
-      ▼
- React Dashboard
+      📄 Bill / Prescription
+                │
+                ▼
+        🔍 OCR Extraction
+        (Tesseract.js)
+                │
+                ▼
+        🤖 AI Processing
+     (LLM + Data Parsing)
+                │
+                ▼
+   💡 Smart Analysis Engine
+   - Price Comparison
+   - Duplicate Detection
+   - Schedule Generation
+                │
+                ▼
+        📊 React Dashboard
+   + 🔔 Smart Notifications
 ```
 
 ---
 
 # 🛠 Tech Stack
 
-### Frontend
+## Frontend
 
 * React (Vite)
 * Tailwind CSS
-* Recharts (data visualization)
-* Framer Motion (animations)
+* Recharts (Data Visualization)
+* Framer Motion (Animations)
 
-### Backend
+## Backend
 
-* Node.js
-* Express.js
-* Multer (file upload)
-* Fuse.js (fuzzy medicine matching)
+* Node.js + Express
+* Multer (File Uploads)
+* Fuse.js (Fuzzy Matching)
 
-### AI & OCR
+## AI & OCR
 
 * Tesseract OCR
-* LLM for bill extraction and analysis
+* LLM for intelligent parsing & explanation
 
 ---
 
@@ -112,13 +155,13 @@ SehatSaafAI
 │   ├── src
 │   ├── components
 │   ├── pages
-│   └── dashboard UI
+│   └── UI dashboard
 │
 ├── Server
 │   ├── controllers
-│   ├── services
 │   ├── routes
-│   └── OCR + AI analysis
+│   ├── services
+│   └── OCR + AI pipeline
 │
 └── README.md
 ```
@@ -128,56 +171,65 @@ SehatSaafAI
 # 🧪 Example Output
 
 ```
-Total Bill Amount: ₹13,038
-
+Total Bill Amount: ₹13,038  
 Transparency Score: 90%
 
-Suspicious Charges:
-- Azithromycin 500mg appears overpriced
-- Ibuprofen 400mg significantly higher than market price
+⚠ Suspicious Charges:
+- Azithromycin overpriced  
+- Ibuprofen higher than market price  
 
-AI Explanation:
-Room charges account for a significant portion of the bill.
-Some medicines appear higher than typical market prices.
+💡 AI Explanation:
+Room charges dominate the bill.
+Some medicines appear significantly overpriced.
 ```
 
 ---
 
-# 🎯 Problem This Solves
+# 🎯 Problem We Solve
 
-Hospital billing is often complex and difficult for patients to understand.
-Many people unknowingly pay **overpriced or duplicate charges**.
+Medical billing is often:
 
-**SehatSaaf AI helps patients:**
+* Complex ❌
+* Non-transparent ❌
+* Hard to understand ❌
 
-* Understand their bills clearly
-* Detect suspicious charges
-* Improve transparency in healthcare billing
+**SehatSaaf AI empowers patients to:**
 
----
-
-# 🏆 Hackathon Impact
-
-This project demonstrates how **AI + OCR + data analysis** can improve transparency in medical billing and empower patients with clear insights into their healthcare expenses.
+* Understand bills clearly
+* Detect overcharging
+* Manage medicines effectively
+* Build trust in healthcare systems
 
 ---
 
-# 👨‍💻 Team Member
+# 🏆 Why This Stands Out
 
-**Nitin Kumar**
-**Samson**
+* Combines **Bill Analysis + Prescription + Notifications**
+* Real-world healthcare impact
+* AI-powered insights + simple explanations
+* Modern SaaS-style UI
+* Works as a **complete healthcare assistant**
 
-## 🌐 Live Demo
+---
 
-🔗 **Try SehatSaaf AI Here:**
+# 👨‍💻 Team
 
-[Open Web App](https://ai-biller-frontend-kumarnitin87654-5471s-projects.vercel.app)
+* **Nitin Kumar**
+* **Samson**
+* **Bhudev Bhanwar**
+
+---
+
+# 🚀 Future Scope
+
+* 📱 Mobile App (PWA)
+* 🔊 Voice-based reminders
+* 📅 Calendar integration
+* 📊 Health history tracking
+* 🧠 Advanced AI insights
 
 ---
 
 # 📜 License
 
 This project is for educational and hackathon purposes.
-
-
-
